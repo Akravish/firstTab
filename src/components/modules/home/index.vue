@@ -3,7 +3,12 @@
     <div class="home__content">
 
       <div class="home__content-center">
-        <timer></timer>
+        <timer v-if="configs.timer.isShowTimer"></timer>
+        <div
+            v-if="configs.greeting.isShowGreeting"
+            class="home__content-greeting">
+          <greeting ></greeting>
+        </div>
       </div>
     </div>
     <!--<div class="page__header">-->

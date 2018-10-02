@@ -25,9 +25,9 @@ export default {
           minutes = date.getMinutes(),
           seconds = date.getSeconds();
 
-      this.timeData = hours + ':' + minutes;
+      this.timeData = (hours < 10 ? ('0' + hours) : hours) + ':' + (minutes < 10 ? ('0' + minutes) : minutes);
       if ( this.configs.timer.isShowSeconds ) {
-        this.timeData += ':' + seconds;
+        this.timeData += ':' + (seconds < 10 ? ('0' + seconds) : seconds);
       }
     }
   }

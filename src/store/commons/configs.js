@@ -7,7 +7,11 @@ import {
 const state = {
   configs: {
     timer: {
+      isShowTimer: true,
       isShowSeconds: true
+    },
+    greeting: {
+      isShowGreeting: true,
     }
   }
 };

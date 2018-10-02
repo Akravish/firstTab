@@ -1,6 +1,6 @@
 <template>
-  <div class="timer">
-    <div class="timer__data">{{timeData}}</div>
+  <div class="greeting">
+    <div class="greeting__text">{{greetingData}}</div>
   </div>
 </template>
 <script src="./index.js"></script>

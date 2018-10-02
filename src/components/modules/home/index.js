@@ -1,7 +1,8 @@
 import Timer from '@/components/modules/home/partials/timer/index.vue'
 import Greeting from '@/components/modules/home/partials/greeting/index.vue'
 
-import {mapMutations,mapActions} from 'vuex'
+import {mapMutations, mapActions, mapGetters} from 'vuex'
+
 import {
   GET_HOME_CONTENT,
   UPDATE_LOADER_STATE
@@ -14,9 +15,12 @@ export default {
     'Greeting': Greeting,
   },
   data() {
-    return {
-      isContentLoaded: false
-    }
+    return {}
+  },
+  computed: {
+    ...mapGetters({
+      configs: 'configs/getConfigs'
+    })
   },
   created(){
 

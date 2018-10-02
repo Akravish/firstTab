@@ -1,33 +1,48 @@
 import {mapGetters} from 'vuex'
 
 export default {
-  name: 'timer',
+  name: 'greeting',
   data () {
     return {
-      timeData: null
+      greetingData: 'Hello World'
     }
   },
-  computed: {
-    ...mapGetters({
-      configs: 'configs/getConfigs'
-    })
-  },
+  // computed: {
+  //   ...mapGetters({
+  //     configs: 'configs/getConfigs'
+  //   })
+  // },
   created(){
     let self = this;
     setInterval( () => {
-      self.updateTime();
+      self.updateGreeting();
     }, 1000);
   },
   methods: {
-    updateTime() {
-      let date = new Date();
-      let hours = date.getHours(),
-          minutes = date.getMinutes(),
-          seconds = date.getSeconds();
+    updateGreeting() {
+      let date = new Date(),
+        hours = date.getHours(),
+        month = date.getMonth(),
+        day = date.getDate();
 
-      this.timeData = hours + ':' + minutes;
-      if ( this.configs.timer.isShowSeconds ) {
-        this.timeData += ':' + seconds;
+      this.greetingData = 'Good ';
+      if ( hours > 6 && hours < 12 ) {
+        this.greetingData += 'morning';
+      } else if ( hours >= 12 && hours < 15 ) {
+        this.greetingData += 'day';
+      } else if ( hours >= 15 && hours < 18 ) {
+        this.greetingData += 'afternoon';
+      } else if ( hours >= 18 && hours < 21 ) {
+        this.greetingData += 'evening';
+      } else  {
+        this.greetingData += 'night';
+      }
+
+      if (11 === month && 25 === day) {
+        this.greetingData = "Merry Christmas";
+      } else
+      if (0 === month && 1 === day) {
+        this.greetingData = "Happy New Year";
       }
     }
   }
