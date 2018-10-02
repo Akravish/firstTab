@@ -1,0 +1,49 @@
+.header
+  padding-bottom: 55px
+
+.header__wrapper
+  position: fixed
+  z-index: 5
+  width: 100%
+  min-height: 55px
+
+.header__content
+  position: relative
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  height: 55px
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.2)
+  background-color: $white
+  +tr()
+
+.header__content-left
+  margin-left: 50px
+  margin-right: 10px
+
+.header__logo
+  position: relative
+  +d-inline
+  width: 123px
+  +tr()
+  img
+    display: block
+    width: 100%
+    filter: grayscale(0)
+
+.header__content-right
+  margin-left: 10px
+  margin-right: 50px
+  display: flex
+  justify-content: space-around
+  align-items: center
+  >div:not(:last-child)
+    margin-right: 15px
+
+@media screen and  (max-width: 980px)
+  .header__content-left
+    margin-left: 20px
+
+  .header__content-right
+    margin-right: 20px

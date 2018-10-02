@@ -1,0 +1,71 @@
+.header-account
+
+.header-account__unlogged
+  +fs(18px)
+  +lh(25px)
+
+.header-account__unlogged-btn
+  color: $orange
+  +tr-fast()
+  &:hover
+    color: $extradarkgray
+
+.header-account__logged
+  display: flex
+  align-items: center
+
+.header-account__logged-img
+  +d-inline
+  width: 36px
+  height: 36px
+  border-radius: 50%
+  border: 1px solid $orange
+  +tr()
+  cursor: pointer
+
+.header-account__logged-text
+  +d-inline
+  margin-left: 12px
+  font-family: $f-Roboto-R
+  +text-f14-l24-R
+  white-space: nowrap
+  color: $darkgray
+  +tr()
+  cursor: pointer
+//  .h-user-btn
+//    position: relative
+//    display: inline-block
+//    vertical-align: top
+//    width: 35px
+//    height: 35px
+//    cursor: pointer
+//    +tr()
+//    background-color: red
+
+
+@media screen and  (max-width: 980px)
+  .header-account__logged-text
+    display: none
+
+@media screen and  (max-width: 768px)
+  .header-account__unlogged-btn
+    display: block
+    vertical-align: top
+    +fs(0px)
+    width: 25px
+    height: 25px
+    cursor: pointer
+    transition: width .4s, height .4s
+    background: url($url-img + 'icons/header/login.png') no-repeat
+    background-size: cover
+    background-position: 0 0
+    filter: grayscale(0)
+    &:hover,&:active
+      background-position: 0 -25px
+//
+//@media screen and  (max-width: 680px)
+//  .h-after-login
+//    .h-user-menu
+//      top: 65px
+//
+//

@@ -1,0 +1,508 @@
+//---TYPES
+.v-btn
+  margin: 0
+  +bbx
+  +lh(34px)
+  border-radius: 4px
+  box-shadow: none!important // you can remove this and use attr 'depressed' instead
+  text-transform: none
+  border: 1px solid $orange!important
+  background-color: $orange!important
+  color: $white!important
+  .v-btn__content
+    margin-top: -1px
+  &:hover,&:active
+    background-color: $white!important
+    color: $orange!important
+  &.v-btn--outline
+    border: 1px solid $orange!important
+    color: $orange!important
+  &.v-btn--disabled
+    background-color: $lightgray!important
+    border: 1px solid $lightgray!important
+    color: $extradarkgray!important
+
+.v-btn-inv
+  border: 1px solid $orange!important
+  background-color: $white!important
+  color: $orange!important
+  &:hover,&:active
+    background-color: $orange!important
+    color: $white!important
+
+//---SIZES
+.v-btn--sw-150
+  width: 100%
+  max-width: 150px
+
+.v-btn--sw-180
+  width: 100%
+  max-width: 180px
+
+.v-btn--sw-230
+  width: 100%
+  max-width: 230px
+
+.v-btn--sw-270
+  width: 100%
+  max-width: 270px
+  +margin-center
+
+.v-btn--sw-300
+  width: 100%
+  max-width: 300px
+
+.v-btn--sw-320
+  width: 100%
+  max-width: 320px
+
+.v-btn--sw-380
+  width: 100%
+  max-width: 380px
+
+.v-btn--sw-450
+  width: 100%
+  max-width: 450px
+
+.v-btn--sw-540
+  width: 100%
+  max-width: 540px
+
+//.btn-h-28
+//  min-height: 28px
+//  line-height: 28px
+//
+.v-btn--sh-40
+  min-height: 40px
+  line-height: 40px
+
+//.btn-h-50
+//  min-height: 50px
+//  line-height: 50px
+//
+
+.v-btn--fs-16
+  +fs(16px)
+
+//---CUSTOM BTN ELEMENTS
+//.btn-prev
+//  position: relative
+//  &:after
+//    content: ''
+//    position: absolute
+//    top: 11px
+//    left: 15px
+//    width: 13px
+//    height: 13px
+//    border-width: 0 0 1px 1px
+//    border-style: solid
+//    transform: rotate(45deg)
+//  &.btn
+//    &:after
+//      border-color: $white
+//    &:hover,&:active
+//      &:after
+//        border-color: $orange
+//    &.btn--outline
+//      &:after
+//        border-color: $orange
+//    &.btn--disabled
+//      &:after
+//        border-color: $gray
+//  &.btn-inv
+//    &:after
+//      border-color: $orange
+//    &:hover,&:active
+//      &:after
+//        border-color: $white
+//    &.btn--disabled
+//      &:after
+//        border-color: $gray
+//
+
+//---SIZES
+//.btn-inline
+//  display: inline-block
+
+//---------------ANGULAR
+////---GENERAL MIXIN
+//=btn
+//  position: relative
+//  margin: 0
+//  min-height: 34px
+//  padding: 0 15px
+//  text-align: center
+//  font-family: $f-Roboto-R
+//  line-height: 34px
+//  text-transform: none
+//  border-radius: 0 !important
+//  cursor: pointer
+//
+////---CUSTOM STYLE
+//
+//.btn-link
+//  +d-inline
+//  width: 100px
+//  +lh(34px)
+//  +fs(16px)
+//  color: $darkgray
+//  text-align: center
+//  border: 1px solid transparent
+//
+//.btn-cancel
+//  display: inline-block
+//  vertical-align: top
+//  width: 90px
+//  line-height: 35px
+//  text-align: center
+//
+//.btn-tag
+//  position: relative
+//  margin: 0
+//  min-height: 34px
+//  padding: 0 15px
+//  text-align: center
+//  font-family: $f-Roboto-R
+//  line-height: 34px
+//  text-transform: none
+//  border-radius: 18px !important
+//  color: $extradarkgray
+//  background-color: $lightgray
+//  border: 1px solid $lightgray
+//  cursor: pointer
+//  +tr
+//  &:hover,&:active
+//    color: $orange
+//    background-color: $white!important
+//    border: 1px solid $orange!important
+//  &.active,
+//  &:hover
+//    color: $orange
+//    background-color: $white!important
+//    border: 1px solid $orange!important
+//    padding-right: 35px
+//    +fs(12px)
+//    .btn-tag-clear
+//      visibility: visible
+//      opacity: 1
+//
+//  .btn-tag-clear
+//    position: absolute
+//    top: 7px
+//    right: 10px
+//    width: 20px
+//    height: 20px
+//    border-radius: 50%
+//    background-color: $orange
+//    visibility: hidden
+//    opacity: 0
+//    +tr
+//  .btn-tag-clear-always
+//    &:after
+//      content: ''
+//      position: absolute
+//      top: 4px
+//      left: 4px
+//      display: block
+//      width: 12px
+//      height: 12px
+//      background-image: url('../img/icons/close/del.png')
+//      background-position: 0 12px
+//      background-size: cover
+//
+//.btn-toggle
+//  +d-inline
+//  width: 45px
+//  height: 35px
+//  background-size: 100% 100%
+//  background-position: center center
+//  background-repeat: no-repeat
+//  &.btn-toggle-map
+//    background-image: url('../img/icons/toggle-map-page/map_gray_icon.png')
+//    &:hover,&:active,&.active
+//      background-image: url('../img/icons/toggle-map-page/map_orang_icon.png')
+//  &.btn-toggle-list
+//    background-image: url('../img/icons/toggle-map-page/list_gray_icon.png')
+//    &:hover,&:active,&.active
+//      background-image: url('../img/icons/toggle-map-page/list_orang_icon.png')
+//
+//.btn-more
+//  position: relative
+//  +d-inline
+//  +text-f14-l24-R
+//  margin-top: 23px
+//  padding-right: 23px
+//  +text-s-uppercase
+//  color: $blue
+//  cursor: pointer
+//  &[more-text],
+//  &[less-text]
+//    text-transform: none
+//  &:after
+//    content: ''
+//    position: absolute
+//    top: 2px
+//    right: 6px
+//    width: 10px
+//    height: 10px
+//    background-color: transparent
+//    border-bottom: 1px solid $blue
+//    border-right: 1px solid $blue
+//    transform: rotateZ(45deg)
+//    +tr()
+//  &.active
+//    &:after
+//      top: 8px
+//      transform: rotateZ(-135deg)
+//  &[arrow="no"]
+//    padding-right: 0
+//    &:after
+//      display: none
+//
+//
+//.btn-del
+//  position: relative
+//  display: inline-block
+//  vertical-align: top
+//  width: 23px
+//  height: 23px
+//  margin-right: 1px
+//  border: 1px solid $gray
+//  span
+//    position: absolute
+//    top: 0
+//    left: 0
+//    display: block
+//    width: 100%
+//    height: 100%
+//    =btn-del
+//      content: " "
+//      position: absolute
+//      top: 10px
+//      left: 0
+//      width: 23px
+//      height: 3px
+//      background-color: $gray
+//    &:before
+//      +btn-del
+//      transform: rotateZ(45deg)
+//    &:after
+//      +btn-del
+//      transform: rotateZ(-45deg)
+//  &.btn-del-s36
+//    width: 36px
+//    height: 36px
+//    span
+//      &:before,
+//      &:after
+//        top: 16px
+//        left: 2px
+//        width: 33px
+//        height: 5px
+//  &:hover,&:active
+//    border: 1px solid $orange
+//    span
+//      &:before,&:after
+//        background-color: $red
+//
+//.btn-back
+//  position: relative
+//  +bbx
+//  border-top: 1px solid $lightgray
+//  border-right: 1px solid $lightgray
+//  border-bottom: 1px solid $lightgray
+//  +tr
+//  cursor: pointer
+//  &:before
+//    content: ''
+//    position: absolute
+//    background-color: $lightgray
+//    border-radius: 50%
+//    +tr
+//  &:after
+//    content: ''
+//    position: absolute
+//    border-left: 2px solid $white
+//    border-bottom: 2px solid $white
+//    transform: rotateZ(45deg)
+//  &:hover,&:active
+//    border-top: 1px solid $orange
+//    border-right: 1px solid $orange
+//    border-bottom: 1px solid $orange
+//    &:before
+//      background-color: $orange
+//  &.btn-back-s
+//    width: 105px
+//    line-height: 42px
+//    padding-right: 45px
+//    padding-left: 20px
+//    &:before
+//      top: 7px
+//      right: 10px
+//      width: 30px
+//      height: 30px
+//    &:after
+//      top: 16px
+//      right: 16px
+//      width: 10px
+//      height: 10px
+//  &.btn-back-m
+//    width: 160px
+//    line-height: 54px
+//    padding-right: 55px
+//    padding-left: 30px
+//    font-size: 22px
+//    color: $lightgray
+//    &:before
+//      top: 7px
+//      right: 10px
+//      width: 40px
+//      height: 40px
+//    &:after
+//      top: 19px
+//      right: 20px
+//      width: 13px
+//      height: 13px
+//    &:hover,&:active
+//      color: $extradarkgray
+//  &.btn-back-dashboard,
+//  &.btn-back-lawyers,
+//  &.btn-back-exemption-sidebar,
+//  &.btn-back-half-page
+//    width: 120px
+//    min-height: 36px
+//    margin: 0
+//    padding: 2px 0 2px 55px
+//    +fs(18px)
+//    +lh(30px)
+//    font-family: $f-Roboto-L
+//    border-top: 1px solid $darkgray
+//    border-right: 1px solid $darkgray
+//    border-bottom: 1px solid $darkgray
+//    border-radius: 0
+//    &:before
+//      display: none
+//    &:after
+//      top: 8px
+//      left: 21px
+//      width: 16px
+//      height: 16px
+//      border-left: 2px solid $darkgray
+//      border-bottom: 2px solid $darkgray
+//      +tr
+//    &:not([disabled])
+//      &:hover,&:active
+//        background-color: $white
+//    &:hover,&:active
+//      border-top: 1px solid $orange
+//      border-right: 1px solid $orange
+//      border-bottom: 1px solid $orange
+//      color: $orange
+//      &:after
+//        border-left: 2px solid $orange
+//        border-bottom: 2px solid $orange
+//
+//.btn-remove
+//  border-color: $gray!important
+//  height: 36px
+//  width: 36px
+//  padding: 0
+//  min-width: 0
+//  text-align: center
+//  background: url('../img/icons/close_normal.png')no-repeat top 3px center!important
+//  background-color: transparent!important
+//  margin: 5px 0
+//
+//
+////---MODIFICATORS
+//.btn-fs-16
+//  +fs(16px)
+//
+//.btn-text-bigger,
+//.btn-fs-22
+//  +fs(22px)
+//
+//.btn-nowrap-normal
+//  padding: 5px 15px 5px
+//  +lh(24px)
+//  white-space: normal
+//
+//.btn-nowrap-normal-thick
+//  padding: 8px 15px 8px
+//  +lh(24px)
+//  white-space: normal
+//
+//.btn-nowrap-normal-thicker
+//  padding: 13px 15px 13px
+//  +lh(24px)
+//  white-space: normal
+//
+//.btn-text-overflow
+//  white-space: nowrap
+//  text-overflow: ellipsis
+//  overflow: hidden
+//
+
+//
+//.btn-full
+//  width: 100%
+//
+//
+////---btn-arrow
+//=btn-arr
+//  position: relative
+//  &:after,
+//  &:before
+//    content: ''
+//    position: absolute
+//    display: block
+//    width: 10px
+//    height: 1px
+//    +tr
+//  &.btn
+//    &:after,
+//    &:before
+//      background: $white
+//    &:hover,&:active
+//      &:after,
+//      &:before
+//        background: $orange
+//  &.btn-inv
+//    &:after,
+//    &:before
+//      background: $orange
+//    &:hover,&:active
+//      &:after,
+//      &:before
+//        background: $white
+//  &[disabled]
+//    &:after,
+//    &:before
+//      background: $white
+//    &:hover,&:active
+//      &:after,
+//      &:before
+//        background: $white
+//  &:after
+//    bottom: 50%
+//    transform: rotate(-45deg) translateY(-4px)
+//  &:before
+//    top: 50%
+//    transform: rotate(45deg) translateY(4px)
+//
+//.btn-arr-prev
+//  +btn-arr
+//  &:after,
+//  &:before
+//    left: 15px
+//
+//.btn-arr-next
+//  +btn-arr
+//  &:after,
+//  &:before
+//    right: 15px
+//  &:after
+//    transform: rotate(-45deg) translateY(4px)
+//  &:before
+//    margin-top: -1px
+//    transform: rotate(45deg) translateY(-4px)

@@ -1,0 +1,68 @@
+.auth-title
+  text-align: center
+  +text-f25-l32-R
+
+.auth-box
+  position: relative
+  max-width: 100%
+  width: 500px
+  +margin-center
+  padding: 0 20px 23px
+  +bbx
+  background-color: $white
+  border: 1px solid $gray
+
+.auth-box__small-wrapper
+  max-width: 320px
+  width: 100%
+  +margin-center
+
+.auth-btn-back
+  position: absolute
+  z-index: 1
+  top: 35px
+  left: 20px
+  width: 30px
+  height: 30px
+  background: url($url-img + 'icons/arrows/arrow-back.png') no-repeat
+  background-position: 0 0
+  cursor: pointer
+  &:hover, &:active
+    background-position: -40px 0
+
+.auth-success__title
+  +fs(18px)
+  +lh(20px)
+  font-family: $f-Roboto-B
+
+.auth-success__icon
+  position: relative
+  width: 70px
+  height: 55px
+  +margin-center
+  &:before
+    content: ""
+    position: absolute
+    top: -12px
+    left: 17px
+    width: 35px
+    height: 60px
+    +bbx
+    border-right: 12px solid #01A214
+    border-bottom: 12px solid #01A214
+    transform: rotateZ(45deg)
+
+.auth-bottom-content
+  text-align: center
+  a
+    margin-top: 5px
+    +d-inline
+    +text-f14-l24-R
+
+.auth-error-text
+  max-width: 470px
+  width: 100%
+  +margin-center
+  color: $red
+
+

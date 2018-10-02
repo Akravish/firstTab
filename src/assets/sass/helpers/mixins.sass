@@ -1,0 +1,192 @@
+//----GENERAL MIXINS
+
+=list-reset
+  list-style: none
+  padding-left: 0
+
+//---grid
+=bbx
+  box-sizing: border-box
+
+=d-inline
+  display: inline-block
+  vertical-align: top
+
+=v-middle
+  vertical-align: middle
+
+=margin-center
+  margin-left: auto
+  margin-right: auto
+
+//---text overflow
+=text-dots
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+//---fonts-size
+=fs($size)
+  font-size: $size
+  font-size: ($size / $base-font-size) * 1rem
+
+=lh($size)
+  line-height: $size
+  line-height: ($size / $base-font-size) * 1rem
+
+//---clearfix
+=clearfix
+  *zoom: 1
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+//---transition
+=tr
+  transition: all .4s
+
+=tr-fast
+  transition: all .2s
+
+//---size font
+
+=text-s-italic
+  font-style: italic
+
+=text-s-uppercase
+  text-transform: uppercase
+
+=text-s-light
+  font-family: $f-Roboto-L
+
+=text-s-bold
+  font-family: $f-Roboto-M
+
+=text-s-bolder
+  font-family: $f-Roboto-B
+
+=text-f35-l48-L
+  +fs(35px)
+  +lh(48px)
+  font-family: $f-Roboto-L
+
+=text-f35-l48-B
+  +fs(35px)
+  +lh(48px)
+  font-family: $f-Roboto-B
+
+=text-f28-l40-R
+  +fs(28px)
+  +lh(40px)
+  font-family: $f-Roboto-R
+
+=text-f28-l35-B
+  +fs(28px)
+  +lh(35px)
+  font-family: $f-Roboto-B
+
+=text-f25-l32-L
+  +fs(25px)
+  +lh(32px)
+  font-family: $f-Roboto-L
+
+=text-f25-l32-R
+  +fs(25px)
+  +lh(32px)
+  font-family: $f-Roboto-R
+
+=text-f25-l32-B
+  +fs(25px)
+  +lh(32px)
+  font-family: $f-Roboto-B
+
+=text-f22-l30-L
+  +fs(22px)
+  +lh(30px)
+  font-family: $f-Roboto-L
+
+=text-f22-l30-R
+  +fs(22px)
+  +lh(30px)
+  font-family: $f-Roboto-R
+
+=text-f22-l30-B
+  +fs(22px)
+  +lh(30px)
+  font-family: $f-Roboto-B
+
+=text-f18-l30-L
+  +fs(18px)
+  +lh(30px)
+  font-family: $f-Roboto-L
+
+=text-f18-l30-R
+  +fs(18px)
+  +lh(30px)
+  font-family: $f-Roboto-R
+
+=text-f18-l30-B
+  +fs(18px)
+  +lh(30px)
+  font-family: $f-Roboto-B
+
+=text-f16-l24-R
+  +fs(16px)
+  +lh(24px)
+  font-family: $f-Roboto-R
+
+=text-f16-l24-M
+  +fs(16px)
+  +lh(24px)
+  font-family: $f-Roboto-M
+
+=text-f16-l24-B
+  +fs(16px)
+  +lh(24px)
+  font-family: $f-Roboto-B
+
+=text-f14-l24-R
+  +fs(14px)
+  +lh(24px)
+  font-family: $f-Roboto-R
+
+=text-f14-l24-B
+  +fs(14px)
+  +lh(24px)
+  font-family: $f-Roboto-B
+
+=text-f12-l24-L
+  +fs(14px)
+  +lh(24px)
+  font-family: $f-Roboto-L
+
+=text-f12-l24-R
+  +fs(12px)
+  +lh(24px)
+  font-family: $f-Roboto-R
+
+=text-f12-l24-B
+  +fs(12px)
+  +lh(24px)
+  font-family: $f-Roboto-B
+
+=text-f12-l24-B
+  +fs(12px)
+  +lh(24px)
+  font-family: $f-Roboto-B
+
+=text-f12-l20-R
+  +fs(12px)
+  +lh(20px)
+  font-family: $f-Roboto-R
+
+=text-f12-l20-B
+  +fs(12px)
+  +lh(20px)
+  font-family: $f-Roboto-B
+
+=text-f12-l20-B
+  +fs(12px)
+  +lh(20px)
+  font-family: $f-Roboto-B

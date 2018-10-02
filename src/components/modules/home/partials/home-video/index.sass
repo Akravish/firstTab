@@ -1,0 +1,157 @@
+.home-video
+  position: relative
+  width: 100%
+  margin-top: -55px
+  padding-top: 55px
+  height: 100vh
+  +bbx
+
+.home-video__wrapper
+  position: relative
+  height: 100%
+
+.home-video__bg
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  overflow: hidden
+  .home-video__bg-video
+    position: relative
+    top: 50%
+    left: 50%
+    width: auto
+    height: auto
+    min-width: 100%
+    min-height: 100%
+    max-width: none
+    max-height: none
+    transform: translate(-50%,-50%)
+  //.dplayer
+  //  min-height: 100%
+  //  height: 100%
+  //.dplayer-video-wrap
+  //  z-index: 2
+  //  background-color: $darkgray
+  //  video
+  //    position: relative
+  //    top: 50%
+  //    left: 50%
+  //    width: auto
+  //    height: auto
+  //    min-width: 100%
+  //    min-height: 100%
+  //    max-width: none
+  //    max-height: none
+  //    transform: translate(-50%,-50%)
+  //.dplayer-bezel-icon
+  //  display: none
+
+.home-video__popup
+  position: relative
+  margin-top: 50px
+  text-align: center
+  z-index: 3
+
+.home-video__popup-title
+  +d-inline
+  margin-top: 7px
+  +fs(18px)
+  +lh(30px)
+  color: $white
+
+.home-video__popup-btn
+  +d-inline
+  width: 45px
+  height: 45px
+  margin-right: 5px
+  background: url($url-img + 'icons/play/play-icon-white@2x.png') top left no-repeat
+  background-size: cover
+  cursor: pointer
+  +tr
+  &:hover,&:active
+    background: url($url-img + 'icons/play/play-icon-hover@2x.png') top left no-repeat
+    background-size: cover
+
+.home-video__bg-img
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: url( $url-img + "source/home/fon2.jpg") 50% 50% no-repeat
+  background-size: cover
+  opacity: 1
+  transition: all 3s
+  &.home-video__bg-img-hide
+    opacity: 0
+
+.home-video__content
+  position: relative
+  z-index: 2
+  padding-top: 160px
+  opacity: 1
+
+.home-video__content-text
+  +fs(12px)
+  +lh(24px)
+  +margin-center
+  margin-bottom: 70px
+  max-width: 900px
+  color: $white
+  +text-s-italic
+
+.home-video__content-title
+  +fs(30px)
+  +lh(38px)
+  color: $white
+//
+//.home-video-title-underline
+//  position: relative
+//  white-space: nowrap
+//  &:after
+//    content: ''
+//    position: absolute
+//    left: 0
+//    bottom: 0
+//    width: 100%
+//    border-bottom: 2px solid $orange
+//
+.home-video__search
+  position: relative
+  width: 100%
+  max-width: 600px
+  +margin-center
+  padding: 20px 20px 5px
+  +bbx
+  background-color: rgba(0,0,0,.5)
+
+.home-video__search-title
+  +text-f25-l32-L
+  color: $white
+
+.home-video__search-example
+  margin-top: 5px
+  +text-f12-l24-R
+  text-align: left
+  color: $gray
+
+@media (max-width: 1400px)
+  .home-video__content
+    padding-top: 45px
+
+  .home-video__content-text
+    margin-bottom: 35px
+
+@media (max-width: 980px)
+  .home-video__content
+    padding-top: 80px
+    padding-bottom: 175px
+
+@media (max-width: 425px)
+  .home-video__search-title
+    +text-f16-l24-R()
+
+  .home-video__content
+    padding-bottom: 255px

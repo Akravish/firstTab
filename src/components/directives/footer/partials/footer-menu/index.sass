@@ -1,0 +1,55 @@
+.footer-menu
+  background-color: #EFEFEF
+  text-align: center
+  border-top: 1px solid $extradarkgray
+
+.footer-menu__list
+  +list-reset
+  display: table
+  width: 100%
+  table-layout: fixed
+  li
+    display: table-cell
+    width: 50%
+    +text-f14-l24-R
+    +text-s-uppercase
+    a
+      color: $darkgray
+      +tr
+      &:hover,
+      &:active
+        color: $blue
+
+@media (max-width: 980px)
+  .footer-menu__list
+    display: block
+    table-layout: auto
+    li
+      display: block
+      float: left
+      width: 33.33%
+
+@media (max-width: 768px)
+  .footer-menu__list
+    li
+      width: 50%
+      padding: 0 30px
+      +bbx
+
+@media (max-width: 480px)
+  .footer-menu__list
+    //display: inline-block
+    //width: auto
+    +lh(24px)
+    +margin-center
+    text-align: center
+    li
+      float: none
+      +d-inline
+      width: auto
+      margin: 0 5px
+      padding: 0
+      text-transform: capitalize
+      text-align: center
+    a
+      +fs(12px)

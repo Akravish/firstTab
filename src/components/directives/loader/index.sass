@@ -1,0 +1,46 @@
+.page-loader
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1400
+  display: flex
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0,.7)
+
+.page-loader__content
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+.page-loader__content-text
+  span
+    color: $lightgray
+
+.page-loader__content-list
+  position: relative
+  +list-reset
+  li
+    position: absolute
+    left: 50%
+    width: 280px
+    margin-left: -140px
+    text-align: center
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  .fade-enter-active
+    transition: all 1s ease
+
+  .fade-leave-active
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+  .fade-enter
+    transform: translateY(-10px)
+    opacity: 0
+
+  .fade-leave-to
+    transform: translateY(50px)
+    opacity: 0

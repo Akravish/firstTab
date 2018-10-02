@@ -1,0 +1,100 @@
+.page
+  display: flex
+  min-height: 100%
+  flex-direction: column
+
+.page__header
+  //padding-bottom: 55px
+  //&.page__header-add
+  //  padding-bottom: 85px
+
+.page__content
+  flex: 1 0 auto
+
+.page__footer
+  flex-shrink: 0
+
+.pt-es
+  padding-top: $mp-es
+.pt-s
+  padding-top: $mp-s
+.pt-m
+  padding-top: $mp-m
+.pt-b
+  padding-top: $mp-b
+.pb-es
+  padding-bottom: $mp-es
+.pb-s
+  padding-bottom: $mp-s
+.pb-m
+  padding-bottom: $mp-m
+.pb-b
+  padding-bottom: $mp-b
+.mt-es
+  margin-top: $mp-es
+.mt-s
+  margin-top: $mp-s
+.mt-m
+  margin-top: $mp-m
+.mt-b
+  margin-top: $mp-b
+.mb-es
+  margin-bottom: $mp-es
+.mb-s
+  margin-bottom: $mp-s
+.mb-m
+  margin-bottom: $mp-m
+.mb-b
+  margin-bottom: $mp-b
+
+.clearfix
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+//fake display table
+.f-table
+  display: table
+.f-tr
+  display: table-row
+.f-td
+  display: table-cell
+  vertical-align: middle
+
+//content sides position
+.pull-center
+  text-align: center
+
+.pull-left
+  text-align: left
+
+.pull-right
+  text-align: right
+
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+.inline-block
+  +d-inline
+
+.wrapper
+  position: relative
+  max-width: 1320px
+  +margin-center
+  +bbx
+  padding-right: 20px
+  padding-left: 20px
+
+@media screen and (max-width: 980px)
+  .pt-b
+    padding-top: $mp-b-max980px
+  .pb-b
+    padding-bottom: $mp-b-max980px
+  .mt-b
+    margin-top: $mp-b-max980px
+  .mb-b
+    margin-bottom: $mp-b-max980px

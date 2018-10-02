@@ -1,0 +1,93 @@
+.footer
+
+.footer__content
+  position: relative
+  color: $white
+  background-color: $black
+  font-family: $f-Roboto-R
+
+.footer__info
+  position: relative
+  display: table
+  width: 100%
+  padding: 13px 0
+
+.footer__info-left
+  display: table-cell
+  vertical-align: middle
+  text-align: left
+  .footer__logo
+    +d-inline
+    width: auto
+    height: 50px
+    img
+      display: block
+      height: 100%
+
+.footer__info-right
+  display: table-cell
+  vertical-align: middle
+  text-align: right
+
+.footer__social-text
+  +d-inline
+  margin-top: 13px
+  margin-right: 10px
+  +fs(14px)
+
+.footer__social-links
+  +d-inline
+  height: 40px
+  a
+    display: inline-block
+    width: 40px
+    height: 40px
+    &:not(:last-child)
+      margin-right: 10px
+  .facebook
+    background: url($url-img + 'icons/social/facebook.png') top left no-repeat
+  .twitter
+    background: url($url-img + 'icons/social/twitter.png') top left no-repeat
+  .googleplus
+    background: url($url-img + 'icons/social/google.png') top left no-repeat
+
+
+.footer__copy
+  position: absolute
+  left: 50%
+  bottom: 15px
+  text-align: center
+  +fs(12px)
+  transform: translateX(-50%)
+
+@media (max-width: 980px)
+  .footer__copy
+    position: relative
+    left: auto
+    bottom: auto
+    padding-bottom: 15px
+    padding-top: 5px
+    transform: translateX(0)
+
+@media (max-width: 480px)
+  .footer__info
+    display: block
+    padding-top: 23px
+
+  .footer__info-left
+    display: block
+    text-align: center
+
+  .footer__info-right
+    display: block
+    padding-top: 23px
+    text-align: center
+
+  .footer__social-text
+    display: block
+    margin-top: 0
+    margin-right: 0
+    padding-bottom: 10px
+
+  .footer__copy
+    padding: 10px 0

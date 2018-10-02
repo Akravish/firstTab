@@ -1,0 +1,18 @@
+//--- NOTES:
+//--- hide-details - hide message block under input
+//--- solo - set solo design
+//--- height="50" - height of input, default 36px
+
+.v-text-field.v-text-field--solo
+  &.page-input
+    +fs(14px)
+    .v-input__control
+      min-height: 36px
+    .v-input__slot
+      margin-bottom: 0
+      padding: 0 10px
+      border: 1px solid $lightgray
+      border-radius: 0
+      box-shadow: none!important
+    input
+      color: $darkgray!important

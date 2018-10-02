@@ -1,0 +1,133 @@
+=side-navbar__btn
+  content: ''
+  position: absolute
+  left: 0
+  width: 100%
+  border-bottom: 2px solid $darkgray
+  +tr()
+
+.side-navbar__btn
+  z-index: 13
+  width: 35px
+  height: 35px
+  padding: 5px
+  +bbx
+  background-color: transparent
+  +tr-fast()
+  cursor: pointer
+  span
+    position: relative
+    display: inline-block
+    vertical-align: top
+    margin-top: 11px
+    width: 100%
+    border-bottom: 2px solid $darkgray
+    +tr()
+    &:before
+      +side-navbar__btn
+      top: -7px
+    &:after
+      +side-navbar__btn
+      top: 7px
+  &:hover,&:active
+    span
+      border-bottom: 2px solid $orange
+      &:before,
+      &:after
+        border-bottom: 2px solid $orange
+  &.active
+    span
+      border-bottom: 2px solid transparent
+      &:before
+        top: 0
+        transform: rotateZ(45deg)
+      &:after
+        top: 0
+        transform: rotateZ(-45deg)
+
+.side-navbar__content
+  .v-navigation-drawer
+    top: 55px
+    box-shadow: none
+    background-color: rgba(0,0,0,0.9)
+  ul
+    +list-reset
+
+
+=side-navbar__icon
+  content: ''
+  position: absolute
+  right: 4px
+  width: 15px
+  height: 2px
+  background-color: $white
+
+.side-navbar__content-item
+  position: relative
+  height: 44px
+  +fs(16px)
+  +text-s-bolder
+  background-color: transparent
+  +tr-fast
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 8px
+    height: 100%
+    background-color: transparent
+    +tr-fast
+  &:hover,&:active
+    background-color: rgba(0,0,0,0.9)
+    &:before
+      background-color: $orange
+  a
+    display: flex
+    height: 100%
+    +bbx
+    padding-left: 20px
+    padding-right: 45px
+    justify-content: flex-start
+    align-items: center
+    color: $white
+    &:before
+      +side-navbar__icon
+      top: 12px
+      transform: rotateZ(60deg)
+    &:after
+      +side-navbar__icon
+      top: 24px
+      transform: rotateZ(-60deg)
+
+.side-navbar__profile
+  position: relative
+  height: 72px
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 20px
+    right: 35px
+    border-bottom: 1px dashed $white
+  a
+    &:before
+      top: 28px
+    &:after
+      top: 40px
+
+.side-navbar__profile-img
+  +d-inline
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  border: 1px solid $orange
+
+.side-navbar__profile-text
+  +d-inline
+  margin-left: 15px
+  font-family: $f-Roboto-R
+
+.side-navbar__auth-btn
+  &:hover,&:active
+    background-color: transparent!important

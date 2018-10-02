@@ -1,0 +1,17 @@
+.icon-list-pointers
+  li
+    position: relative
+    padding-left: 40px
+    &:before
+      content: ""
+      position: absolute
+      top: -4px
+      left: 8px
+      width: 8px
+      height: 18px
+      border-right: 4px solid $green
+      border-bottom: 4px solid $green
+      transform: rotateZ(45deg)
+    &.icon-list-pointers__default
+      &:before
+        border-color: $gray

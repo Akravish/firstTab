@@ -1,0 +1,55 @@
+.v-input.v-input--checkbox
+  &.page-checkbox-inline
+    display: inline-flex
+  &.page-checkbox
+    margin-top: 0
+    padding: 0
+    +fs(14px)
+    .v-input__slot
+      align-items: flex-start
+      margin-bottom: 0
+    .v-input--selection-controls__input
+      align-items: center
+      width: 16px
+      height: 24px
+      margin-right: 8px
+    .v-input--selection-controls__ripple
+      z-index: 1
+      &.accent--text
+        color: $orange!important
+      //left: -16px
+    .v-label
+      +text-f14-l24-R
+      color: $darkgray
+    .v-icon
+      position: relative
+      display: block
+      width: 16px
+      height: 16px
+      +bbx
+      font-size: 0
+      border: 1px solid $darkgray
+      &:after
+        content: ''
+        position: absolute
+        top: 1px
+        left: 1px
+        display: block
+        width: 12px
+        height: 12px
+        background-color: $orange
+        transform: scale(0)
+        +tr-fast
+    .v-messages
+      display: none
+  &.v-input--is-label-active
+    .v-icon
+      &:after
+        transform: scale(1)
+
+  &.page-checkbox-small
+    .v-input--selection-controls__input
+      height: 24px
+  &.page-checkbox-medium
+    .v-input--selection-controls__input
+      height: 36px
