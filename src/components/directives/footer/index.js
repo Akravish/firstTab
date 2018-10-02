@@ -1,4 +1,3 @@
-import FooterMenu from '@/components/directives/footer/partials/footer-menu/index.vue'
 import {mapGetters} from 'vuex'
 
 export default {

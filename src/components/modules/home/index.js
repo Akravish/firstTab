@@ -1,9 +1,3 @@
-import HomeVideo from '@/components/modules/home/partials/home-video/index.vue'
-import YouAsk from '@/components/modules/home/partials/you-ask/index.vue'
-import WhyProfitable from '@/components/modules/home/partials/why-profitable/index.vue'
-import HomeBusiness from '@/components/modules/home/partials/home-business/index.vue'
-import KnowYourTaxes from '@/components/modules/home/partials/know-your-taxes/index.vue'
-import HomeSignIn from '@/components/modules/home/partials/home-sign-in/index.vue'
 import FooterComponent from '@/components/directives/footer/index.vue'
 import HeaderComponent from '@/components/directives/header/index.vue'
 
@@ -16,12 +10,6 @@ import {
 export default {
   name: 'homeModule',
   components: {
-    'HomeVideo': HomeVideo,
-    'YouAsk': YouAsk,
-    'WhyProfitable': WhyProfitable,
-    'HomeBusiness': HomeBusiness,
-    'KnowYourTaxes': KnowYourTaxes,
-    'HomeSignIn': HomeSignIn,
     'HeaderComponent': HeaderComponent,
     'FooterComponent': FooterComponent,
   },

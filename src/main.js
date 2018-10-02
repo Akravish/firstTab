@@ -15,7 +15,6 @@ import VueAxios from 'vue-axios'
 import App from './App'
 import router from './routes'
 import store from './store'
-import authAxios from './services/commons/auth'
 
 import Snotify, { SnotifyPosition } from 'vue-snotify'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'

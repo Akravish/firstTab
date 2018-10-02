@@ -1,5 +1,3 @@
-import SideNavbar from '@/components/directives/header/partials/side-navbar/index.vue'
-import HeaderAccount from '@/components/directives/header/partials/header-account/index.vue'
 import {mapGetters} from 'vuex'
 
 export default {
@@ -8,8 +6,6 @@ export default {
     // isShowFooterMenu: Boolean
   },
   components: {
-    'SideNavbar': SideNavbar,
-    'HeaderAccount': HeaderAccount
   },
   data () {
     return {

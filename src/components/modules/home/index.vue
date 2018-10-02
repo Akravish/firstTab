@@ -16,7 +16,6 @@
     <!--<div class="page__footer">-->
       <!--<footer-component is-show-footer-menu></footer-component>-->
     <!--</div>-->
-
   </div>
 
 </template>

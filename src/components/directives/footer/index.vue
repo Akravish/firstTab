@@ -1,9 +1,6 @@
 <template>
   <div class="footer">
 
-
-    <footer-menu v-if="isShowFooterMenu"></footer-menu>
-
     <div class="footer__content">
       <div class="wrapper">
         <div class="footer__info">
