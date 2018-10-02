@@ -1,5 +1,11 @@
 <template>
-  <div class="page home">
+  <div class="home">
+    <div class="home__content">
+
+      <div class="home__content-center">
+        <timer></timer>
+      </div>
+    </div>
     <!--<div class="page__header">-->
       <!--<header-component></header-component>-->
     <!--</div>-->

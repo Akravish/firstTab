@@ -5,9 +5,7 @@ export default {
   props: {
     isShowFooterMenu: Boolean
   },
-  components: {
-    'FooterMenu': FooterMenu
-  },
+  components: {},
   data () {
     return {
     }

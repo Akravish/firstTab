@@ -46,9 +46,6 @@
     },
     created() {
       this.getSiteData();
-      if (Vue.vueAuth.isAuthenticated()) {
-        this.updateUserData();
-      }
     },
     methods: {
       ...mapActions({

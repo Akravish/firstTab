@@ -1,5 +1,5 @@
-import FooterComponent from '@/components/directives/footer/index.vue'
-import HeaderComponent from '@/components/directives/header/index.vue'
+import Timer from '@/components/modules/home/partials/timer/index.vue'
+import Greeting from '@/components/modules/home/partials/greeting/index.vue'
 
 import {mapMutations,mapActions} from 'vuex'
 import {
@@ -10,8 +10,8 @@ import {
 export default {
   name: 'homeModule',
   components: {
-    'HeaderComponent': HeaderComponent,
-    'FooterComponent': FooterComponent,
+    'Timer': Timer,
+    'Greeting': Greeting,
   },
   data() {
     return {
@@ -20,22 +20,22 @@ export default {
   },
   created(){
 
-    this.loader([true,['Load Data']]);
+    // this.loader([true,['Load Data']]);
 
-    this.getHomeContent().then(result=>{
-      this.isContentLoaded = true;
-    }).catch(error=>{
-
-    }).finally(()=>{
-      this.loader([false]);
-    });
+    // this.getHomeContent().then(result=>{
+    //   this.isContentLoaded = true;
+    // }).catch(error=>{
+    //
+    // }).finally(()=>{
+    //   this.loader([false]);
+    // });
   },
   methods: {
-    ...mapMutations({
-      loader: 'loader/' + UPDATE_LOADER_STATE,
-    }),
-    ...mapActions({
-      getHomeContent: 'home/' + GET_HOME_CONTENT
-    })
+    // ...mapMutations({
+    //   loader: 'loader/' + UPDATE_LOADER_STATE,
+    // }),
+    // ...mapActions({
+    //   getHomeContent: 'home/' + GET_HOME_CONTENT
+    // })
   }
 }

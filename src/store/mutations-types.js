@@ -17,12 +17,8 @@ export const GET_HOME_CONTENT = 'GET_HOME_CONTENT';
 
 export const HOME_POPUP_STATUS = 'HOME_POPUP_STATUS';
 
-//#todo del this all
-export const SEARCH_PROPERTY_REQUEST = 'SEARCH_PROPERTY_REQUEST'
-export const SEARCH_ADDITIONAL_DATA = 'SEARCH_ADDITIONAL_DATA'
+//-----------------------------------------------------
+export const UPDATE_CONFIGS = 'UPDATE_CONFIGS';
 
-export const CHECK_SUPPORT_PROPERTY = 'CHECK_SUPPORT_PROPERTY'
-export const ANALYSIS_REQUEST = 'ANALYSIS_REQUEST'
 
-export const REPORT_REQUEST = 'REPORT_REQUEST'
 
