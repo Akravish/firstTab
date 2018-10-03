@@ -1,5 +1,3 @@
-import {mapGetters} from 'vuex'
-
 export default {
   name: 'greeting',
   data () {
@@ -7,11 +5,6 @@ export default {
       greetingData: 'Hello World'
     }
   },
-  // computed: {
-  //   ...mapGetters({
-  //     configs: 'configs/getConfigs'
-  //   })
-  // },
   created(){
     let self = this;
     setInterval( () => {

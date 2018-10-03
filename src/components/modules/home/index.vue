@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="home__bg">
+      <bg-img></bg-img>
+    </div>
     <div class="home__content">
 
       <div class="home__content-center">
@@ -7,7 +10,7 @@
         <div
             v-if="configs.greeting.isShowGreeting"
             class="home__content-greeting">
-          <greeting ></greeting>
+          <greeting></greeting>
         </div>
       </div>
     </div>

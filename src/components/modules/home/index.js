@@ -1,5 +1,6 @@
 import Timer from '@/components/modules/home/partials/timer/index.vue'
 import Greeting from '@/components/modules/home/partials/greeting/index.vue'
+import BgImg from '@/components/modules/home/partials/bg-img/index.vue'
 
 import {mapMutations, mapActions, mapGetters} from 'vuex'
 
@@ -13,6 +14,7 @@ export default {
   components: {
     'Timer': Timer,
     'Greeting': Greeting,
+    'BgImg': BgImg,
   },
   data() {
     return {}
