@@ -25,24 +25,6 @@ export default {
 
       let url = require('@/assets/img/media/bg-img/' + monthArray[month] + '/' + day + '.jpg');
       this.bgStyle.background = 'url(' + url + ') no-repeat center'
-    },
-    getImages() {
-      console.log('getImages - run')
-      for(let day = 1; day < 32; day++){
-      let link = document.createElement("a");
-        if (day < 10) {
-          day = '0' + day;
-        }
-
-        link.target = '_blank';
-        link.text = day;
-        link.href = 'https://api.ryanoconr.com/dash/backgrounds/' + 'oct' + '/' + day + '.jpg';
-        link.download = day + '.jpg';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
-      console.log('getImages - done')
     }
   }
 }

@@ -8,7 +8,7 @@ const state = {
   configs: {
     timer: {
       isShowTimer: true,
-      isShowSeconds: true
+      isShowSeconds: false
     },
     greeting: {
       isShowGreeting: true,

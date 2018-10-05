@@ -5,6 +5,8 @@
 import 'normalize.css'
 import 'vuetify/dist/vuetify.min.css'
 import 'vue-snotify/styles/material.scss'
+import '@/assets/css/weather/weather-icons.css'
+// import '@/assets/css/weather/weather-icons-wind.css'
 
 import Vue from 'vue'
 import Vuex from 'vuex'
