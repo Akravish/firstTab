@@ -4,6 +4,9 @@
       <bg-img></bg-img>
     </div>
     <div class="home__content">
+      <div class="home__content-top-right">
+        <weather v-if="configs.weather.isShowWeather"></weather>
+      </div>
 
       <div class="home__content-center">
         <timer v-if="configs.timer.isShowTimer"></timer>

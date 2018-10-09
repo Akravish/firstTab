@@ -12,6 +12,18 @@ const state = {
     },
     greeting: {
       isShowGreeting: true,
+    },
+    weather: {
+      isShowWeather: true,
+      locationInfo: {
+        title: 'Sharivka',
+        coords: {
+          lat: 49.217905453918156,
+          log: 26.948432922363285,
+        }
+      },
+      OWPApiKey: '73062b0c8b434336f158ded489c82988',
+      OWPUrl: 'http://api.openweathermap.org/data/2.5/weather?'
     }
   }
 };

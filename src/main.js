@@ -37,8 +37,9 @@ Vue.use(Vuetify, {
   }
 });
 
-Vue.axios = axios;
-Vue.axios.defaults.baseURL = process.env.API_URL;
+// Vue.axios = axios;
+// Vue.axios.defaults.baseURL = process.env.API_URL;
+axios.defaults.baseURL = '';
 
 Vue.use(VueAxios, axios);
 

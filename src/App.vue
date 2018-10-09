@@ -16,11 +16,9 @@
   import Vue from 'vue'
   import Loader from '@/components/directives/loader/index.vue/'
 
-  import {mapGetters, mapMutations, mapActions} from 'vuex'
+  import {mapGetters} from 'vuex'
   import {
-    GET_SITE_DATA,
     UPDATE_LOADER_STATE,
-    UPDATE_USER_DATA
   } from '@/store/mutations-types'
 
   export default {
@@ -45,15 +43,11 @@
       }
     },
     created() {
-      this.getSiteData();
+
     },
     methods: {
-      ...mapActions({
-        getSiteData: 'site/' + GET_SITE_DATA,
-        updateUserData: 'user/' + UPDATE_USER_DATA
-      })
-    },
 
+    },
   }
 </script>
 

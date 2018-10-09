@@ -1,2 +1,46 @@
-.bg-img
-  height: 100%
+.weather
+  color: $white
+  &:hover,&:active
+    .weather__temp-tooltip
+      right: 100%
+      opacity: 1
+      visibility: visible
+
+.weather__temp
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+
+.weather__temp-icon
+  margin-right: 5px
+  +fslh(25px,1)
+  text-shadow: 0 0 20px rgba(0,0,0,0.75)
+
+.weather__temp-num
+  +fs(20px)
+  +lh(30px)
+  text-shadow: 0 0 20px rgba(0,0,0,0.75)
+
+.weather__temp-tooltip
+  position: absolute
+  top: 50%
+  right: 75%
+  margin-right: 5px
+  padding: 2px 5px
+  +bbx
+  +fslh(12px,1.2)
+  transform: translateY(-50%)
+  background-color: rgba(0,0,0,.3)
+  border-radius: 5px
+  text-shadow: 0 0 10px rgba(0,0,0,0.9)
+  +tr(.4s)
+  opacity: 0
+  visibility: hidden
+
+
+.weather__name
+  +fslh(12px,1.2)
+  text-align: center
+  text-shadow: 0 0 20px rgba(0,0,0,0.75)
+
