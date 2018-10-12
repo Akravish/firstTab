@@ -63,8 +63,8 @@ const mutations = {
     console.info('mutations UPDATE_LOCAL_STORAGE_DATA');
     if (payload.type === 'config') {
       let customUserConfigs = state.customUserConfigs;
-      for (let key in data) {
-        customUserConfigs[key] = data[key];
+      for (let key in payload.data) {
+        customUserConfigs[key] = payload.data[key];
         console.info('key - '+key+' | value2 - ', customUserConfigs[key]);
       }
       Vue.set(state, 'customUserConfigs', customUserConfigs);
@@ -73,8 +73,8 @@ const mutations = {
       if (userComponentData === null) {
         userComponentData = {};
       }
-      for (let key in data) {
-        userComponentData[key] = data[key];
+      for (let key in payload.data) {
+        userComponentData[key] = payload.data[key];
         console.info('key - '+key+' | value2 - ', userComponentData[key]);
       }
       Vue.set(state, 'userComponentData', userComponentData);

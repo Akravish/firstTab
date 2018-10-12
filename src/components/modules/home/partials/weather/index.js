@@ -1,19 +1,21 @@
 import {mapMutations, mapActions, mapGetters} from 'vuex'
 
 import {
-  GET_OWP_DATA
+  GET_OWP_DATA,
+  UPDATE_LOCAL_STORAGE_DATA
 } from '@/store/mutations-types'
 
 export default {
   name: 'weather',
   data () {
     return {
-      weatherClassIcon: null
+      weatherClassIcon: null,
+      OWPData: null
     }
   },
   computed: {
     ...mapGetters({
-      OWPData: 'weather/getOWPData'
+      localStorageData: 'configs/getData',
     })
   },
   watch: {
@@ -37,11 +39,37 @@ export default {
     }
   },
   created(){
-    this.getOWPData();
+    if (this.localStorageData !== null && this.localStorageData.weather !== null) {
+      let difTime = 72e5; //---2 hour =>2*60*60*1000
+      if ((new Date) - new Date(this.localStorageData.weather.weatherTime) < difTime ) {
+        this.OWPData = this.localStorageData.weather.weatherData;
+      } else {
+        this.updateWeatherData();
+      }
+    } else {
+      this.updateWeatherData();
+    }
   },
   methods: {
     ...mapActions({
-      getOWPData: 'weather/' + GET_OWP_DATA
-    })
+      getOWPData: 'weather/' + GET_OWP_DATA,
+      updateData: 'configs/' + UPDATE_LOCAL_STORAGE_DATA
+    }),
+    updateWeatherData() {
+      console.log('?')
+      this.getOWPData().then(OWPData => {
+        let payloadForUpdate = {
+          type: 'data',
+          data: {
+            weather: {
+              weatherTime: new Date,
+              weatherData: OWPData
+            }
+          }
+        };
+        this.updateData(payloadForUpdate);
+        this.OWPData = this.localStorageData.weather.weatherData;
+      });
+    }
   }
 }

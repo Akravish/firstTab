@@ -4,20 +4,20 @@ import {
   GET_OWP_DATA
 } from '../mutations-types'
 
-const state = {
-  OWPData: null
-};
+// const state = {
+//   OWPData: null
+// };
 
-const getters = {
-  getOWPData: state => state.OWPData
-};
+// const getters = {
+//   getOWPData: state => state.OWPData
+// };
 
-const mutations = {
-  [GET_OWP_DATA] (state, data) {
-    //7.96 tem
-    Vue.set(state, 'OWPData', data);
-  },
-};
+// const mutations = {
+//   [GET_OWP_DATA] (state, data) {
+//     //7.96 tem
+    // Vue.set(state, 'OWPData', data);
+  // },
+// };
 
 const actions = {
   GET_OWP_DATA ({commit, state, rootState}) {
@@ -31,7 +31,6 @@ const actions = {
       // '&lang=ua' +
       '&APPID=' + weatherConfig.OWPApiKey)
       .then(result =>{
-        commit(GET_OWP_DATA, result.data);
         return Promise.resolve(result.data);
       })
       .catch(error => {
@@ -43,8 +42,8 @@ const actions = {
 
 export default {
   namespaced: true,
-  state,
-  getters,
-  mutations,
+  // state,
+  // getters,
+  // mutations,
   actions
 }
