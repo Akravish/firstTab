@@ -7,7 +7,7 @@ import {mapMutations, mapActions, mapGetters} from 'vuex'
 
 import {
   LOAD_LOCAL_STORAGE_DATA,
-  UPDATE_CONFIGS,
+  UPDATE_LOCAL_STORAGE_DATA,
   SET_DEFAULT_CONFIGS,
   UPDATE_LOADER_STATE
 } from '@/store/mutations-types'

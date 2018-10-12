@@ -2,9 +2,8 @@ import Vue from 'vue'
 
 import {
   LOAD_LOCAL_STORAGE_DATA,
-  UPDATE_CONFIGS,
+  UPDATE_LOCAL_STORAGE_DATA,
   SET_DEFAULT_CONFIGS,
-  UPDATE_USER_COMPONENT_DATA,
   SAVE_LOCAL_STORAGE_DATA,
 } from '../mutations-types'
 
@@ -60,30 +59,29 @@ const mutations = {
     Vue.set(state, 'customUserConfigs', state.defaultUserConfigs);
   },
 
-  [UPDATE_CONFIGS] (state, data) {
-    console.info('mutations UPDATE_CONFIGS');
-    let customUserConfigs = state.customUserConfigs;
-
-    for (let key in data) {
-      customUserConfigs[key] = data[key];
-      console.info('key - '+key+' | value2 - ', customUserConfigs[key]);
+  [UPDATE_LOCAL_STORAGE_DATA] (state, payload) {
+    console.info('mutations UPDATE_LOCAL_STORAGE_DATA');
+    if (payload.type === 'config') {
+      let customUserConfigs = state.customUserConfigs;
+      for (let key in data) {
+        customUserConfigs[key] = data[key];
+        console.info('key - '+key+' | value2 - ', customUserConfigs[key]);
+      }
+      Vue.set(state, 'customUserConfigs', customUserConfigs);
+    } else if (payload.type === 'data') {
+      let userComponentData = state.userComponentData;
+      if (userComponentData === null) {
+        userComponentData = {};
+      }
+      for (let key in data) {
+        userComponentData[key] = data[key];
+        console.info('key - '+key+' | value2 - ', userComponentData[key]);
+      }
+      Vue.set(state, 'userComponentData', userComponentData);
+    } else {
+      console.error('mutations UPDATE_LOCAL_STORAGE_DATA | error type of payload')
     }
-
-    Vue.set(state, 'userComponentData', userComponentData);
-  },
-  [UPDATE_USER_COMPONENT_DATA] (state, data) {
-    console.info('mutations UPDATE_USER_COMPONENT_DATA');
-    let userComponentData = state.userComponentData;
-
-    if (userComponentData === null) {
-      userComponentData = {};
-    }
-    for (let key in data) {
-      userComponentData[key] = data[key];
-      console.info('key - '+key+' | value2 - ', userComponentData[key]);
-    }
-    Vue.set(state, 'userComponentData', userComponentData);
-  },
+  }
 };
 
 const actions = {
@@ -101,14 +99,9 @@ const actions = {
     })
   },
 
-  UPDATE_CONFIGS ({dispatch, commit}, data) {
-    console.info('action UPDATE_CONFIGS');
-    commit(UPDATE_CONFIGS, data);
-    dispatch('SAVE_LOCAL_STORAGE_DATA');
-  },
-  UPDATE_USER_COMPONENT_DATA ({dispatch, commit}, data) {
-    console.info('action UPDATE_USER_COMPONENT_DATA');
-    commit(UPDATE_USER_COMPONENT_DATA, data);
+  UPDATE_LOCAL_STORAGE_DATA ({dispatch, commit}, data) {
+    console.info('action UPDATE_LOCAL_STORAGE_DATA');
+    commit(UPDATE_LOCAL_STORAGE_DATA, data);
     dispatch('SAVE_LOCAL_STORAGE_DATA')
   },
 
