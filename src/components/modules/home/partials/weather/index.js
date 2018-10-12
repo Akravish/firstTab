@@ -43,8 +43,5 @@ export default {
     ...mapActions({
       getOWPData: 'weather/' + GET_OWP_DATA
     })
-    // getOWPData() {
-
-    // }
   }
 }

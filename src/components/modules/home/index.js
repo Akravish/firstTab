@@ -6,7 +6,9 @@ import Weather from '@/components/modules/home/partials/weather/index.vue'
 import {mapMutations, mapActions, mapGetters} from 'vuex'
 
 import {
-  GET_HOME_CONTENT,
+  LOAD_LOCAL_STORAGE_DATA,
+  UPDATE_CONFIGS,
+  SET_DEFAULT_CONFIGS,
   UPDATE_LOADER_STATE
 } from '@/store/mutations-types'
 
@@ -21,12 +23,27 @@ export default {
   data() {
     return {}
   },
+  watch: {
+    configs: {
+      immediate: true, //--- this runs initially
+      deep: true, //---this detects all changes
+      handler(newVal, oldVal) {
+        if(newVal !== null) {
+          console.info('watch configs', newVal);
+        }
+      }
+    }
+  },
   computed: {
     ...mapGetters({
       configs: 'configs/getConfigs'
     })
   },
   created(){
+    this.getLocalStorageData().then(() => {
+    }).catch(() => {
+      this.setDefaultConfigs();
+    });
 
     // this.loader([true,['Load Data']]);
 
@@ -40,10 +57,11 @@ export default {
   },
   methods: {
     // ...mapMutations({
-    //   loader: 'loader/' + UPDATE_LOADER_STATE,
+    //   setDefaultConfigs: 'configs/' + SET_DEFAULT_CONFIGS
     // }),
-    // ...mapActions({
-    //   getHomeContent: 'home/' + GET_HOME_CONTENT
-    // })
+    ...mapActions({
+      getLocalStorageData: 'configs/' + LOAD_LOCAL_STORAGE_DATA,
+      setDefaultConfigs: 'configs/' + SET_DEFAULT_CONFIGS
+    })
   }
 }

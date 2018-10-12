@@ -21,15 +21,15 @@ const mutations = {
 
 const actions = {
   GET_OWP_DATA ({commit, state, rootState}) {
-    let weatherPayload = rootState.configs.configs.weather;
+    let weatherConfig = rootState.configs.generalConfigs.weather;
 
     let promise = Vue.axios.get(
-      weatherPayload.OWPUrl +
-      'lat=' + weatherPayload.locationInfo.coords.lat +
-      '&lon=' + weatherPayload.locationInfo.coords.log +
+      weatherConfig.OWPUrl +
+      'lat=' + weatherConfig.locationInfo.coords.lat +
+      '&lon=' + weatherConfig.locationInfo.coords.log +
       '&units=metric' +
       // '&lang=ua' +
-      '&APPID=' + weatherPayload.OWPApiKey)
+      '&APPID=' + weatherConfig.OWPApiKey)
       .then(result =>{
         commit(GET_OWP_DATA, result.data);
         return Promise.resolve(result.data);

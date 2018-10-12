@@ -3,7 +3,7 @@
     <div class="home__bg">
       <bg-img></bg-img>
     </div>
-    <div class="home__content">
+    <div v-if="configs !== null" class="home__content">
       <div class="home__content-top-right">
         <weather v-if="configs.weather.isShowWeather"></weather>
       </div>
@@ -17,22 +17,6 @@
         </div>
       </div>
     </div>
-    <!--<div class="page__header">-->
-      <!--<header-component></header-component>-->
-    <!--</div>-->
-    <!--<div class="page__content">-->
-      <!--<home-video></home-video>-->
-      <!--<div v-if="isContentLoaded === true">-->
-        <!--<you-ask></you-ask>-->
-        <!--<why-profitable></why-profitable>-->
-        <!--<home-business></home-business>-->
-        <!--<know-your-taxes></know-your-taxes>-->
-        <!--<home-sign-in></home-sign-in>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="page__footer">-->
-      <!--<footer-component is-show-footer-menu></footer-component>-->
-    <!--</div>-->
   </div>
 
 </template>
